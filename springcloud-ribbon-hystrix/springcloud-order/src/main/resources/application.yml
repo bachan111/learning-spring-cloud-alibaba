@@ -1,0 +1,19 @@
+server:
+  port: 8012
+
+spring:
+  application:
+    name: nacos-order
+  cloud:
+    nacos:
+      discovery:
+        enabled: true
+        server-addr: http://127.0.0.1:8848
+        register-enabled: true
+
+feign:
+  hystrix:
+    enabled: false
+ribbon:
+  ReadTimeout: 6000
+  ConnectTimeout: 5000
